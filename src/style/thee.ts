@@ -2,6 +2,7 @@ import { primaryKey } from 'drizzle-orm/gel-core';
 
 const theme = {
 	white: '#FFFFFF',
+	bg: '#FBFBFB',
 	primary: '#0094FF',
 
 	gray100: '#F2F2F2',
