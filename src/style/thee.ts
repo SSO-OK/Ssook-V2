@@ -1,5 +1,3 @@
-import { primaryKey } from 'drizzle-orm/gel-core';
-
 const theme = {
 	white: '#FFFFFF',
 	bg: '#FBFBFB',
