@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import theme from '../../style/theme';
 
 export const Header_Container = styled.header`
   display: flex;
@@ -8,6 +9,7 @@ export const Header_Container = styled.header`
   padding: 0 16%;
   font-family: "GmarketSansMedium";
   align-items: center;
+  border-bottom: 0.7px solid v ar(--gray-G300, #B9B9BC);
 
   @media (max-width: 768px) {
     padding: 0 8%;
