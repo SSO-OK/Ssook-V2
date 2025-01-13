@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -47,17 +47,17 @@ export const HomeButtonContainer = styled.div`
 `;
 
 interface ButtonProps {
-  selected: boolean;
+	selected: boolean;
 }
 
 export const HomeButton = styled.button<ButtonProps>`
   display: flex;
-  background-color: ${(props) => (props.selected ? "#0094ff" : "transparent")};
+  background-color: ${(props) => (props.selected ? '#0094ff' : 'transparent')};
   border: 1px solid #0094ff;
   border-radius: 30px;
   padding: 8px 16px;
   font-size: 16px;
-  color: ${(props) => (props.selected ? "#ffffff" : "#0094ff")};
+  color: ${(props) => (props.selected ? '#ffffff' : '#0094ff')};
   cursor: pointer;
   transition: all 0.3s ease;
 

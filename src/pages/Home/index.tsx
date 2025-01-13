@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import * as S from './style';
+import WordSetSection from '../../components/Boxs'; // 경로는 프로젝트 구조에 맞게 조정
 
 const Home = () => {
-	const navigate = useNavigate();
-
 	const [seButton, setSeButton] = useState<string>('기초');
-
-	const ButtonClick = (buttonName: string) => {
-		setSeButton(buttonName);
-	};
 
 	const buttons = ['기초', '중등', '고등'];
 	const boxes = [
@@ -23,7 +17,6 @@ const Home = () => {
 			tag: '1800단어',
 			date: '2025.01.10',
 		},
-
 		{
 			title: '고등학교 2학년 필수 영어 단어',
 			tag: '2000단어',
@@ -39,31 +32,15 @@ const Home = () => {
 					<S.HomeButton
 						key={name}
 						selected={seButton === name}
-						onClick={() => ButtonClick(name)}
+						onClick={() => setSeButton(name)}
 					>
 						{name}
 					</S.HomeButton>
 				))}
 			</S.HomeButtonContainer>
-			<S.BoxContainer>
-				{boxes.map((box, index) => (
-					<S.Box onClick={() => navigate('/Click')} key={index}>
-						<S.BoxTitle>{box.title}</S.BoxTitle>
-						<S.BoxTag>{box.tag}</S.BoxTag>
-						<S.BoxDate>{box.date}</S.BoxDate>
-					</S.Box>
-				))}
-			</S.BoxContainer>
-			<S.HomeTitle>최근 추가된 단어 세트 모음 ⚡️</S.HomeTitle>
-			<S.BoxContainer>
-				{boxes.map((box, index) => (
-					<S.Box onClick={() => navigate('/Click')} key={index}>
-						<S.BoxTitle>{box.title}</S.BoxTitle>
-						<S.BoxTag>{box.tag}</S.BoxTag>
-						<S.BoxDate>{box.date}</S.BoxDate>
-					</S.Box>
-				))}
-			</S.BoxContainer>
+
+			<WordSetSection title='추천 단어 세트 모음 🎢' wordSets={boxes} />
+			<WordSetSection title='최근 추가된 단어 세트 모음 ⚡️' wordSets={boxes} />
 		</S.HomeContainer>
 	);
 };

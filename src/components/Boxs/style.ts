@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+export const HomeTitle = styled.div`
+  display: flex;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 5%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+`;
 
 export const BoxContainer = styled.div`
   display: flex;
