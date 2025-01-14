@@ -39,7 +39,7 @@ const Home = () => {
 				))}
 			</S.HomeButtonContainer>
 
-			<WordSetSection title='추천 단어 세트 모음 🎢' wordSets={boxes} />
+			<WordSetSection title='' wordSets={boxes} />
 			<WordSetSection title='최근 추가된 단어 세트 모음 ⚡️' wordSets={boxes} />
 		</S.HomeContainer>
 	);

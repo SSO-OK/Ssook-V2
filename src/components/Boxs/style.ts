@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const HomeTitle = styled.div`
   display: flex;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 5%;
 
   @media (max-width: 768px) {
@@ -20,7 +20,6 @@ export const BoxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 20px;
 
   @media (max-width: 768px) {
     gap: 10px;
